@@ -1,0 +1,51 @@
+<html>
+    <head><title>Weirdos Unblocked Games | Help Page</title><link rel="shortcut icon" href=favicon.ico"></head>
+    <body style="font-size:20px;font-family:sans-serif;">
+        <div class="bg"></div>
+        <div class="header">
+            <div style="font-size:80px;left:5px;position:absolute">Help Page</div>
+        </div>
+        <div class="helpbox"id="topbox"style="top:150px;">hello</div>
+    </body>
+</html>
+<script>
+    let list = ["help"];
+    let result;
+    const searchParams = new URLSearchParams(window.location.search);
+    for(var i=0;i<list.length;i++){
+        if(searchParams.has(list[i])){
+            let that = searchParams.get(list[i])
+            if(that == "onlinegames"){
+                result = "<h2>Guaranteed vs Outsourced</h2><p>Offline games are completely local and stored on this site. They will continue working barring a site shutdown or catastrophic failure. Online games, or 'outsourced' games, rely on another site being online that I do not control and cannot remake if it becomes blocked.</p>";
+            }
+        }
+    }
+    document.getElementById("topbox").innerHTML = result;
+</script>
+<style>
+    div.bg{
+        width:100%;
+        height:100%;
+        background-color:black;
+        position:fixed;
+        left:0;
+        top:0;
+    }
+    div.header {
+        background-color: green;
+        width: 100%;
+        height: 100px;
+        left: 0px;
+        top: 0px;
+        position: absolute;
+        z-index: 0;
+    }
+    .helpbox{
+        color:green;
+        border: 5px solid green;
+        width:1000px;
+        /*height:100px;*/
+        left:10px;
+        position:absolute;
+    }
+</style>
